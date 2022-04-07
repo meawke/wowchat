@@ -1,0 +1,17 @@
+version: "3.7"
+
+x-logging:
+  &default-logging
+    driver: "json-file"
+    options:
+      max-size: "1024k"
+      max-file: "10"
+
+services:
+  wowchat:
+    image: wowchat
+    container_name: wowchat
+    restart: always
+    volumes:
+      - ./config/wowchat.conf:/app/wowchat.conf
+    logging: *default-logging
