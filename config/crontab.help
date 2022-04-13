@@ -1,0 +1,1 @@
+# docker-compose exec wowchat sh -c 'touch /etc/crontabs/cron.update'
